@@ -19,7 +19,8 @@ $(document).ready(function() {
         });
       },
       error: function(jqXHR) {
-        console.error(jqXHR.responseText);
+        $("#repos").empty();
+        $("#repos").append("<li>" + jqXHR.responseText + "</li>");
       }
     });
   });
